@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Learning Scrapping</title>
+        <!-- <script src="index.js" type="text/javascript"></script> -->
+    </head>
+    <body>
+        <h1 align="center">Info about the product scrapped from Amazon : </h1>
+        <div id="a"></div>
+
+        <script>
+            fetch("scapper.json")
+                .then(response => response.json())
+                .then(data => {
+                    let $=data;
+                    let x=document.getElementById("a").innerHTML+=$;
+                })
+        </script>
+    </body>
+</html>
